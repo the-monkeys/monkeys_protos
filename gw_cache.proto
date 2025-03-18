@@ -2,10 +2,6 @@ syntax = "proto3";
 
 package cache_svc;
 
-import "google/protobuf/timestamp.proto";
-
-
-
 
 option go_package = "./apis/serviceconn/gateway_cache/pb";
 
