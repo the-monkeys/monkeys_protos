@@ -28,6 +28,18 @@ message CreateReportResponse {
   string error = 3;
 }
 
+message FlagReportRequest {
+  string report_id = 1;
+  string user_id = 2;
+}
+
+message FlagReportResponse {
+  uint32 status = 1;
+  string message = 2;
+  string error = 3;
+}
+
 service ReportsService {
   rpc CreateReport(CreateReportRequest) returns (CreateReportResponse) {}
+  rpc FlagReport(FlagReportRequest) returns (FlagReportResponse) {}
 } 
