@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package reports_svc;
 
-option go_package = "./apis/serviceconn/gateway_reports/pb";
+option go_package = "./generated/go";
 
 message Report {
   string report_id = 1;
@@ -11,15 +11,18 @@ message Report {
   string reporter_id = 4;
   string reported_type = 5;
   string reported_id = 6;
-  string reason = 7;
-  string status = 8;
-  string reporter_notes = 9;
-  string moderator_id = 10;
-  string moderator_notes = 11;
+  string status = 7;
+  string reporter_notes = 8;
+  string moderator_id = 9;
+  string moderator_notes = 10;
 }
 
 message CreateReportRequest {
-  Report data = 1;
+  string reason_type = 1;
+  string reporter_id = 2;
+  string reported_type = 3;
+  string reported_id = 4;
+  string reporter_notes = 5;
 }
 
 message CreateReportResponse {
