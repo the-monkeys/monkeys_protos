@@ -15,6 +15,7 @@ message Report {
   string reporter_notes = 8;
   string moderator_id = 9;
   string moderator_notes = 10;
+  string verdict = 11;
 }
 
 message CreateReportRequest {
